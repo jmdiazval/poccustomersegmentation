@@ -47,13 +47,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.frequency ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}} B
+    {{ value | divided_by: 1000000000 | round:0}} B days
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M days
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K days
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} days
     {% endif %}
     ;;
   }
@@ -83,13 +83,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.monetary_value ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B€
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M€
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K€
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} €
     {% endif %}
     ;;
   }
@@ -99,13 +99,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.NetPrice ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B€
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M€
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K€
     {% elsif value >= 0 and value < 1000 %}
-    {{ value}}
+    {{ value | round:0}} €
     {% endif %}
     ;;
   }
@@ -120,13 +120,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.recency ;;
     html:
     {% if value > 1000000000 %}
-      {{ value | divided_by: 1000000000 | round:0}}B
+      {{ value | divided_by: 1000000000 | round:0}} B days
     {% elsif value >= 1000000 and value < 1000000000 %}
-      {{ value | divided_by: 1000000 | round:0}}M
+      {{ value | divided_by: 1000000 | round:0}} M days
     {% elsif value >= 1000 and value < 1000000 %}
-      {{ value | divided_by: 1000 | round:0}}K
+      {{ value | divided_by: 1000 | round:0}} K days
     {% elsif value >= 0 and value < 1000 %}
-      {{ value | round:0}}
+      {{ value | round:0}} days
     {% endif %}
     ;;
   }
@@ -168,13 +168,13 @@ view: sales_orders_cluster_data {
     value_format_name:  eur
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B€
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M€
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K€
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} €
     {% endif %}
     ;;
   }
@@ -185,13 +185,13 @@ view: sales_orders_cluster_data {
     value_format_name:  eur
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B€
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M€
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K€
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} €
     {% endif %}
     ;;
   }
@@ -201,13 +201,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.recency ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B days
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M days
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K days
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} days
     {% endif %}
     ;;
   }
@@ -217,13 +217,13 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.frequency ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B
+    {{ value | divided_by: 1000000000 | round:0}} B days
     {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M
+    {{ value | divided_by: 1000000 | round:0}} M days
     {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K
+    {{ value | divided_by: 1000 | round:0}} K days
     {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}}
+    {{ value | round:0}} days
     {% endif %}
     ;;
   }
