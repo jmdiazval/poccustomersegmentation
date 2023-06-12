@@ -47,7 +47,7 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.frequency ;;
     html:
     {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}} B
+    {{ value | divided_by: 1000000000 | round:0}}  B
     {% elsif value >= 1000000 and value < 1000000000 %}
     {{ value | divided_by: 1000000 | round:0}}M
     {% elsif value >= 1000 and value < 1000000 %}
