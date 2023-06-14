@@ -278,6 +278,21 @@ view: sales_orders_cluster_data {
       {% else %}
         NULL
       {% endif %};;
+    html:
+    {% if value > 1000000000 %}
+    {{ value | divided_by: 1000000000 | round:0}}B
+    {% elsif value >= 1000000 and value < 1000000000 %}
+    {{ value | divided_by: 1000000 | round:0}}M
+    {% elsif value >= 1000 and value < 1000000 %}
+    {{ value | divided_by: 1000 | round:0}}K
+    {% elsif value >= 1.5 and value < 1000 %}
+    {{ value | round:0}}
+    {% elsif value >= 0.5 and value < 1.5 %}
+    {{ value | round:0}}
+    {% elsif value <= 0.5 %}
+    {{ value | round:0}}
+    {% endif %}
+    ;;
   }
 
 }
