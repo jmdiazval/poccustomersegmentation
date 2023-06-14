@@ -280,41 +280,4 @@ view: sales_orders_cluster_data {
       {% endif %};;
   }
 
-
-  parameter: filter_dynamic_measure_test {
-    hidden: no
-    type:  unquoted
-    allowed_value: {
-      label: "Sales"
-      value: "net_price"
-    }
-    allowed_value: {
-      label: "Recency"
-      value: "recency_avg"
-    }
-    allowed_value: {
-      label: "Frequency"
-      value: "frequency_avg"
-    }
-    allowed_value: {
-      label: "MonetaryValue"
-      value: "monetary_value_avg"
-    }
-  }
-
-  measure: dynamic_measure_test {
-    hidden: no
-    type: sum
-    sql: ${TABLE}.{% parameter filter_dynamic_measure_test %} ;;
-    html:
-    {% if value > 1000000000 %}
-    {{ value | divided_by: 1000000000 | round:0}}B €
-    {% elsif value >= 1000000 and value < 1000000000 %}
-    {{ value | divided_by: 1000000 | round:0}}M €
-    {% elsif value >= 1000 and value < 1000000 %}
-    {{ value | divided_by: 1000 | round:0}}K €
-    {% elsif value >= 0 and value < 1000 %}
-    {{ value | round:0}} €
-    {% endif %} ;;
-  }
 }
