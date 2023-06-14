@@ -304,7 +304,7 @@ view: sales_orders_cluster_data {
 
   measure: dynamic_measure_test {
     hidden: no
-    type: number
+    type: sum
     sql: ${TABLE}.{% parameter filter_dynamic_measure_test %} ;;
     html:
     {% if value > 1000000000 %}
