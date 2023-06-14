@@ -208,7 +208,7 @@ view: sales_orders_cluster_data {
     {{ value | divided_by: 1000 | round:0}}K days
     {% elsif value >= 2 and value < 1000 %}
     {{ value | round:0}} days
-    {% elsif value == 1%}
+    {% elsif value == 1 %}
     {{ value | round:0}} day
     {% elsif value == 0 %}
     {{ value | round:0}} days
