@@ -206,7 +206,11 @@ view: sales_orders_cluster_data {
     {{ value | divided_by: 1000000 | round:0}}M days
     {% elsif value >= 1000 and value < 1000000 %}
     {{ value | divided_by: 1000 | round:0}}K days
-    {% elsif value >= 0 and value < 1000 %}
+    {% elsif value >= 2 and value < 1000 %}
+    {{ value | round:0}} days
+    {% elsif value == 1%}
+    {{ value | round:0}} day
+    {% elsif value == 0 %}
     {{ value | round:0}} days
     {% endif %}
     ;;
@@ -222,7 +226,11 @@ view: sales_orders_cluster_data {
     {{ value | divided_by: 1000000 | round:0}}M days
     {% elsif value >= 1000 and value < 1000000 %}
     {{ value | divided_by: 1000 | round:0}}K days
-    {% elsif value >= 0 and value < 1000 %}
+    {% elsif value >= 2 and value < 1000 %}
+    {{ value | round:0}} days
+    {% elsif value == 1 %}
+    {{ value | round:0}} day
+    {% elsif value == 0 %}
     {{ value | round:0}} days
     {% endif %}
     ;;
