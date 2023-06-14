@@ -262,11 +262,11 @@ view: sales_orders_cluster_data {
       {% if     filter_dynamic_measure._parameter_value == 'Sales' %}
         ${net_price}
       {% elsif  filter_dynamic_measure._parameter_value == 'Recency' %}
-        ${recency}
+        ${recency_avg}
       {% elsif  filter_dynamic_measure._parameter_value == 'Frequency' %}
-        ${frequency}
+        ${frequency_avg}
       {% elsif  filter_dynamic_measure._parameter_value == 'MonetaryValue' %}
-        ${monetary_value}
+        ${monetary_value_avg}
       {% else %}
         NULL
       {% endif %};;
