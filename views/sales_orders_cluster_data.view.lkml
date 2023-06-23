@@ -156,6 +156,11 @@ view: sales_orders_cluster_data {
     sql: ${TABLE}.WeightUnit ;;
   }
 
+  dimension: customer_segment {
+    type: string
+    sql: ${TABLE}.CUSTOMER_SEGMENT ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [sold_to_party_header_name]
